@@ -1,3 +1,9 @@
 rootProject.name = 'kodilla-course'
 include 'codilla-testing'
+include 'codilla-testing:user'
+findProject(':codilla-testing:user')?.name = 'user'
+include 'codilla-testing:user'
+findProject(':codilla-testing:user')?.name = 'user'
+include 'codilla-testing:user'
+findProject(':codilla-testing:user')?.name = 'user'
 
