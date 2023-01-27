@@ -2,9 +2,9 @@ package com.kodilla.testing.shape;
 
 import java.util.ArrayList;
 
-public class ShapeCollector {
+class ShapeCollector {
 
-    private ArrayList<Shape> shapes;
+    ArrayList<Shape> shapes;
 
     public ShapeCollector() {
         shapes = new ArrayList<>();
@@ -22,6 +22,14 @@ public class ShapeCollector {
 
     public Shape getShape(int n){
         return shapes.get(n);
+    }
+
+    public String getShapeNames(){
+        StringBuilder stringBuilder = new StringBuilder();
+            for (Shape shape:shapes) {
+                stringBuilder.append(shape.getShapeName()+ " ");
+            }
+            return stringBuilder.toString();
     }
 }
 
