@@ -3,12 +3,12 @@ package com.kodilla.testing.shape;
 class Square implements Shape {
     private double side;
 
-    private Square(double side){
+    Square(double side){
         this.side = side;
     }
     @Override
     public String getShapeName() {
-        return "Square";
+        return "square";
     }
     @Override
     public Double getArea(){

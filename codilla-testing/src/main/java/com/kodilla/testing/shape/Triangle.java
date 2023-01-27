@@ -5,7 +5,7 @@ class Triangle implements Shape {
     private double side;
     private double height;
 
-    private Triangle(double side, double height) {
+    Triangle(double side, double height) {
         this.side = side;
         this.height = height;
     }

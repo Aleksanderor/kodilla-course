@@ -3,15 +3,15 @@ package com.kodilla.testing.shape;
 class Circle implements Shape {
 
     private double radius;
-    private double pi;
+    private double pi = 3.14;
 
-    private Circle (double radius,double pi) {
+    Circle(double radius) {
         this.radius = radius;
         this.pi = pi;
     }
     @Override
     public String getShapeName () {
-        return "Circle";
+        return "circle";
     }
     @Override
     public Double getArea(){
