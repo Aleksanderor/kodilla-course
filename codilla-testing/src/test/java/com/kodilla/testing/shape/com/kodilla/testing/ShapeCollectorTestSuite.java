@@ -1,16 +1,31 @@
 package com.kodilla.testing.shape;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+@Nested
+@DisplayName("testing ShapeCollector class")
+
 
 public class ShapeCollectorTestSuite {
+    int testCounter = 0;
 
+    @BeforeEach
+    public void beforeEveryTest() {
+        testCounter++;
+        System.out.println("Preparing to execute test #" + testCounter);
+    }
+    @AfterEach
+    public void afterEachTest(){
+        testCounter++;
+            System.out.println("Executed test #" + testCounter);
+
+        }
 
     @Test
+    @DisplayName("When using getShape method then it should get the waned object")
     void testGetShape() {
         ShapeCollector shapecollector = new ShapeCollector();
 
@@ -21,6 +36,8 @@ public class ShapeCollectorTestSuite {
         assertEquals(25, shape.getArea());
     }
     @Test
+    @DisplayName("When adding a new shape " +
+            "then it should add the new shape to the ArrayList<Shape>")
     void testAddShape() {
         ShapeCollector shapecollector = new ShapeCollector();
         Square square = new Square(5);
@@ -32,6 +49,8 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
+    @DisplayName("When removing a shape form the ArrayList<Shape> +" +
+            "it shoud remove the shape from ArrayList<Shape>")
     void testRemoveShape(){
         ShapeCollector shapecollector = new ShapeCollector();
         Triangle triangle = new Triangle(3.0,3.0);
@@ -42,7 +61,8 @@ public class ShapeCollectorTestSuite {
 
     }
     @Test
-    @DisplayName("When adding new shapes")
+    @DisplayName("When wanting to get all Shapes in one string +" +
+            "then it should print the shapes form ArrayList<Shape> in one string")
     void testGetShapes() {
 
         ShapeCollector shapecollector = new ShapeCollector();
@@ -53,8 +73,8 @@ public class ShapeCollectorTestSuite {
         shapecollector.addFigure(circle);
         shapecollector.addFigure(square);
 
-        String figureNames = shapecollector.getShapeNames();
-        assertEquals("triangle circle square ", shapecollector.getShapeNames());
+        String figureNames = shapecollector.showFigures();
+        assertEquals("triangle circle square ", shapecollector.showFigures());
     }
 
 }
