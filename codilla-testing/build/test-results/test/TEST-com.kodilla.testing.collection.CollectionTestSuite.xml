@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.testing.collection.CollectionTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-01-25T19:23:54" hostname="DESKTOP-Q0KKPO1" time="0.053">
+  <properties/>
+  <testcase name="When creating empty arraythen extermiante method in OddNumbersExterminator class should add anything to new array" classname="com.kodilla.testing.collection.CollectionTestSuite" time="0.048"/>
+  <testcase name="When using the exterminate method from OddNumbersExterminator class on a arraythen it should return an array with even numbers only" classname="com.kodilla.testing.collection.CollectionTestSuite" time="0.003"/>
+  <system-out><![CDATA[Test has begun
+Test has ended
+Test has begun
+Test has ended
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
