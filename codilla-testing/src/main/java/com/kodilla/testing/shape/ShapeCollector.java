@@ -24,7 +24,7 @@ class ShapeCollector {
         return shapes.get(n);
     }
 
-    public String getShapeNames(){
+    public String showFigures(){
         StringBuilder stringBuilder = new StringBuilder();
             for (Shape shape:shapes) {
                 stringBuilder.append(shape.getShapeName()+ " ");
