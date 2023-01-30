@@ -3,8 +3,6 @@ package com.kodilla.testing;
 import com.kodilla.testing.calculator.Calculator;
 import com.kodilla.testing.user.SimpleUser;
 
-import com.kodilla.testing.user.SimpleUser;
-
 public class TestingMain {
 
     public static void main(String[] args) {
@@ -24,10 +22,15 @@ public class TestingMain {
     int addResult = calculator.addAToB(2,2);
     int substractResult = calculator.SubstractAFromB(9,8);
 
-       if(addResult == 4 && substractResult == 1) {
-           System.out.println("Calculator works :)");
+       if(addResult == 4) {
+           System.out.println("Adding method in calculator works :) ");
        } else {
-           System.out.println("Something dosent work : (");
+           System.out.println("Adding method in calculator class dosent work : ( ");
+       }
+       if (substractResult == 1) {
+           System.out.println("Substracting metod in calculator class works :)");
+       }else{
+           System.out.println("Substracting method in calculator class doest work : (");
        }
     }
 }
