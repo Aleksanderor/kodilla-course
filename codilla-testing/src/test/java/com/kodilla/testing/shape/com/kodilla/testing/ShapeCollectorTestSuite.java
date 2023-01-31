@@ -71,9 +71,10 @@ public class ShapeCollectorTestSuite {
 
         //when
         shapeCollector.removeFigure(triangle);
-        ArrayList<Shape> shapes = shapeCollector.shapes;
+
 
         //then
+        ArrayList<Shape> shapes = shapeCollector.getShapes();
         assertEquals(0,shapes.size());
 
     }
@@ -94,7 +95,7 @@ public class ShapeCollectorTestSuite {
         String figureNames = shapeCollector.showFigures();
 
         //then
-        assertEquals("triangle circle square ", shapeCollector.showFigures());
+        assertEquals("triangle circle square ", figureNames);
     }
 
 }
