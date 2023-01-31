@@ -82,7 +82,6 @@ class BookDirectoryTestSuite {
     void testListBooksWithConditionFragmentShorterThan3() {
 
         // Given
-        LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
 
         //when
