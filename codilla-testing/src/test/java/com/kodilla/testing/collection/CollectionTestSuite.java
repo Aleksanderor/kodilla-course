@@ -24,13 +24,15 @@ public class CollectionTestSuite {
     @Test
     public void testOddNumbersExterminatorEmptyList() {
 
+        //Given
         OddNumbersExterminator exterminator = new OddNumbersExterminator();
-
         List<Integer> numbers = new ArrayList<>();
         List<Integer> expected = new ArrayList<>();
 
+        //when
         List<Integer> result = exterminator.exterminate(numbers);
 
+        //then
         assertEquals(expected, result);
 
     }
@@ -40,21 +42,21 @@ public class CollectionTestSuite {
     @Test
     public void testOddNumbersExterminatorNormalList() {
 
+        //Given
         OddNumbersExterminator exterminator = new OddNumbersExterminator();
-
         List<Integer> mixNumbers = new ArrayList<>();
         mixNumbers.add(1);
         mixNumbers.add(2);
         mixNumbers.add(3);
         mixNumbers.add(4);
-
         List<Integer> expected = new ArrayList<>();
         expected.add(2);
         expected.add(4);
 
-
+        //when
         List <Integer> result = exterminator.exterminate(mixNumbers);
 
+        //Then
         assertEquals(expected, result);
     }
 }
