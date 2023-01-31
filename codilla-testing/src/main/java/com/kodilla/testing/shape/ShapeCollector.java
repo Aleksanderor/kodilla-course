@@ -31,5 +31,9 @@ class ShapeCollector {
             }
             return stringBuilder.toString();
     }
+
+    public ArrayList<Shape> getFigure() {
+        return
+    }
 }
 

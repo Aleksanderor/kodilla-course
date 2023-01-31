@@ -29,10 +29,10 @@ public class CollectionTestSuite {
         List<Integer> numbers = new ArrayList<>();
         List<Integer> expected = new ArrayList<>();
 
-        //when
+        //When
         List<Integer> result = exterminator.exterminate(numbers);
 
-        //then
+        //Then
         assertEquals(expected, result);
 
     }
@@ -53,7 +53,7 @@ public class CollectionTestSuite {
         expected.add(2);
         expected.add(4);
 
-        //when
+        //When
         List <Integer> result = exterminator.exterminate(mixNumbers);
 
         //Then
