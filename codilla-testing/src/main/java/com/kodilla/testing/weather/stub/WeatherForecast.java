@@ -24,7 +24,7 @@ public class WeatherForecast {
         return resultMap;
     }
 
-    public double calculateAvarageTemperature() {
+    public double calculateAverageTemperature() {
         Map<String, Double> resultMap = temperatures.getTemperatures();
         int numTemperatures = resultMap.size();
         double sum = 0;

@@ -46,22 +46,22 @@ class WeatherForecastTestSuite {
         assertEquals(5, quantityOfSensors);
     }
     @Test
-    @DisplayName("When calculating avarage temeperatures " +
+    @DisplayName("When calculating average temeperatures " +
             "then it should calculate the right value form temperatureMap")
     void testCalculateAvarageTemperature(){
         // Given
         WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
-        double expectedAvarageTemperature = 25.56;
+        double expectedAverageTemperature = 25.56;
 
         // When
-        double calculatedAvarageTemperature = weatherForecast.calculateAvarageTemperature();
+        double calculatedAverageTemperature = weatherForecast.calculateAverageTemperature();
 
         // Then
-        assertEquals(expectedAvarageTemperature, calculatedAvarageTemperature);
+        assertEquals(expectedAverageTemperature, calculatedAverageTemperature);
     }
 
     @Test
-    @DisplayName("When calculating avarage temeperatures " +
+    @DisplayName("When calculating avarage temperatures " +
             "then it should calculate the right value form temperatureMap")
     void testCalculateMedianTemperature(){
 

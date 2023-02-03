@@ -12,9 +12,11 @@ public class StreamMain {                                                   // [
         PoemDecorator add3ExclamationMarks = text ->"!!! " + text + " !!!";
         poemBeautifier.beautify ("text", add3ExclamationMarks);
 
+        //changing letters in text to capital letters
         PoemDecorator toUpperText = text -> text.toUpperCase();
         poemBeautifier.beautify("text", toUpperText);
 
+        //Adding three ### and the beginning and at the and of String "text"
         PoemDecorator addHasztags = text -> "### " + text + " ###";
         poemBeautifier.beautify("text", addHasztags);
     }

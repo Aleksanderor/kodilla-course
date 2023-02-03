@@ -95,7 +95,7 @@ public class ShapeCollectorTestSuite {
         String figureNames = shapeCollector.showFigures();
 
         //then
-        assertEquals("triangle circle square ", figureNames);
+        assertEquals("triangle circle square ", shapeCollector.showFigures());
     }
 
 }
