@@ -4,7 +4,11 @@ import java.util.ArrayList;
 
 class ShapeCollector {
 
-    ArrayList<Shape> shapes;
+    private ArrayList<Shape> shapes;
+
+    public ArrayList<Shape> getShapes() {
+        return shapes;
+    }
 
     public ShapeCollector() {
         shapes = new ArrayList<>();
@@ -32,8 +36,5 @@ class ShapeCollector {
             return stringBuilder.toString();
     }
 
-    public ArrayList<Shape> getFigure() {
-        return
-    }
 }
 

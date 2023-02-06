@@ -2,6 +2,7 @@
 <module version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$/../../../kodilla-stream/src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../../kodilla-stream/src/main" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../kodilla-stream/src/main/java" isTestSource="false" />
     </content>
   </component>
