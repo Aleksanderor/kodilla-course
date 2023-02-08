@@ -15,6 +15,7 @@ public class FirstChallenge {
      * @param args
      */
     public static void main(String[] args) {
+
         FirstChallenge firstChallenge = new FirstChallenge();
 
         try {
