@@ -6,9 +6,8 @@ import java.util.List;
 public class Forum {
     private List<ForumUser> userList = new ArrayList<>();
 
-    public void addUser(ForumUser user) {
-
-        userList.add(user);
+    public Forum(List<ForumUser> userList) {
+        this.userList = userList;
     }
 
     public List<ForumUser> getUserList() {
