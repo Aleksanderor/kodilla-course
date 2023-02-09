@@ -14,9 +14,13 @@ class BoardTestSuite {
 
     @Test
     public void testAddTaskListAverageWorkingOnTask() {
+
+        //Given
         Board project = prepareTestData();
         List<TaskList> inProgressTasks = new ArrayList<>();
         inProgressTasks.add(new TaskList("In progress"));
+
+        //When
         double average = project.getTaskLists().stream()
                 .filter(inProgressTasks::contains)
                 .flatMap(taskList -> taskList.getTasks().stream())
@@ -24,6 +28,7 @@ class BoardTestSuite {
                 .mapToLong(x -> (ChronoUnit.DAYS.between(x, LocalDate.now())))
                 .average().getAsDouble();
 
+        //Then
         assertEquals(10.0, average, 0);
     }
 
@@ -104,6 +109,7 @@ class BoardTestSuite {
 
     @Test
     void testAddTaskListFindUsersTasks() {
+
         //Given
         Board project = prepareTestData();
 
