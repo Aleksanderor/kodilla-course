@@ -11,10 +11,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ShapeCollectorTestSuite {
     static int testCounter = 0;
-    private ShapeCollector shapeCollector;
+    private ShapeCollector shapeCollector = new ShapeCollector();
     @BeforeEach
     public void beforeEveryTest() {
-        shapeCollector = new ShapeCollector();
         System.out.println("Test#: " + (++testCounter) + " starting..");
     }
 
@@ -28,6 +27,7 @@ public class ShapeCollectorTestSuite {
             "then it should get the waned object")
 
     void testGetShape() {
+
         //given
         Shape square = new Square(5);
         shapeCollector.addFigure(square);

@@ -26,7 +26,7 @@ class BookDirectoryTestSuite {
     @BeforeEach
     void setup(){
         LibraryUser libraryUser = new LibraryUser("tomek","kowal", "921932");
-        //libraryDatabaseMock = new ()
+        BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
 
     }
     private List<Book> generateListOfNBooks(int booksQuantity) {
@@ -40,6 +40,7 @@ class BookDirectoryTestSuite {
 
     @Test                                                                               // [1]
     void testListBooksWithConditionsReturnList() {
+
         /// given
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
         List<Book> resultListOfBooks = generateListOfNBooks(4);
