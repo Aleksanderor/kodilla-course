@@ -1,6 +1,5 @@
 package com.kodilla.testing.library;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -22,13 +21,8 @@ class BookDirectoryTestSuite {
 
     @Mock
     private LibraryDatabase libraryDatabaseMock;
-    private LibraryUser libraryUser;
-    @BeforeEach
-    void setup(){
-        LibraryUser libraryUser = new LibraryUser("tomek","kowal", "921932");
-        BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
+    LibraryUser libraryUser = new LibraryUser("tomek","kowal", "921932");
 
-    }
     private List<Book> generateListOfNBooks(int booksQuantity) {
         List<Book> resultList = new ArrayList<>();
         for (int n = 1; n <= booksQuantity; n++) {
@@ -83,6 +77,7 @@ class BookDirectoryTestSuite {
     void testListBooksWithConditionFragmentShorterThan3() {
 
         // given
+        LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
 
         //when
@@ -97,6 +92,7 @@ class BookDirectoryTestSuite {
     @DisplayName("When library user han no book " +
             "then the books list should be empty")
     void testListFfBookInHandOffIs0() {
+
         //given
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
         List<Book> books = Collections.emptyList();
@@ -113,6 +109,7 @@ class BookDirectoryTestSuite {
     @DisplayName("When library user has 1 book " +
             "then the books list have 1 posistion")
     void  testListFfBookInHandOffIs1 () {
+
         //given
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
         List<Book> books = generateListOfNBooks(1);
