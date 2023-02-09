@@ -11,33 +11,32 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ShapeCollectorTestSuite {
     static int testCounter = 0;
-    private static ShapeCollector shapeCollector;
+    private ShapeCollector shapeCollector;
     @BeforeEach
     public void beforeEveryTest() {
+        shapeCollector = new ShapeCollector();
         System.out.println("Test#: " + (++testCounter) + " starting..");
     }
 
     @AfterEach
     public void afterEachTest(){
-        System.out.println("Test# " + testCounter + " has been finished");
+        System.out.println("Test#: " + testCounter + " has been finished");
     }
-    @BeforeAll
-    public void shapeCollectorCreater(){
-        shapeCollector = new ShapeCollector();
-    }
+
     @Test
     @DisplayName("When using getShape method +" +
             "then it should get the waned object")
 
     void testGetShape() {
-        //given
+
+        //Given
         Shape square = new Square(5);
         shapeCollector.addFigure(square);
 
-        //when
+        //When
         Shape shape = shapeCollector.getShape(0);
 
-        //then
+        //Then
         assertEquals("square", shape.getShapeName());
         assertEquals(25, shape.getArea());
     }
@@ -46,14 +45,14 @@ public class ShapeCollectorTestSuite {
             "then it should add the new shape to the ArrayList<Shape>")
     void testAddShape() {
 
-        //given
+        //Given
         Square square = new Square(5);
 
-        //when
+        //When
         shapeCollector.addFigure(square);
         ArrayList<Shape> shapes = shapeCollector.getShapes();
 
-        //then
+        //Then
         assertEquals(1, shapes.size());
         assertEquals("square", shapes.get(0).getShapeName());
         assertEquals(25, shapes.get(0).getArea());
@@ -65,15 +64,15 @@ public class ShapeCollectorTestSuite {
 
     void testRemoveShape(){
 
-        //given
+        //Given
         Triangle triangle = new Triangle(3.0,3.0);
         shapeCollector.addFigure(triangle);
 
-        //when
+        //When
         shapeCollector.removeFigure(triangle);
 
 
-        //then
+        //Then
         ArrayList<Shape> shapes = shapeCollector.getShapes();
         assertEquals(0,shapes.size());
 
@@ -83,7 +82,7 @@ public class ShapeCollectorTestSuite {
             "then it should print the shapes form ArrayList<Shape> in one string")
     void testGetShapes() {
 
-        //given
+        //Given
         Triangle triangle = new Triangle(3.0, 3.0);
         Square square = new Square(10);
         Circle circle = new Circle(8);
@@ -91,10 +90,10 @@ public class ShapeCollectorTestSuite {
         shapeCollector.addFigure(circle);
         shapeCollector.addFigure(square);
 
-        //when
+        //When
         String figureNames = shapeCollector.showFigures();
 
-        //then
+        //Then
         assertEquals("triangle circle square ", shapeCollector.showFigures());
     }
 
