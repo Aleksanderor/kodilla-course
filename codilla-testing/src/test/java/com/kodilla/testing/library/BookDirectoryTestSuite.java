@@ -44,6 +44,7 @@ class BookDirectoryTestSuite {
         resultListOfBooks.add(book2);
         resultListOfBooks.add(book3);
         resultListOfBooks.add(book4);
+
         // when
         when(libraryDatabaseMock.listBooksWithCondition("Secret")).thenReturn(resultListOfBooks);// [13]
 
@@ -81,7 +82,7 @@ class BookDirectoryTestSuite {
     @Test
     void testListBooksWithConditionFragmentShorterThan3() {
 
-        // Given
+        // given
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
 
         //when

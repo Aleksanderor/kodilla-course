@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 public class StreamMain {                                                   // [4]
 
     public static void main(String[] args) {
+
         // Exercise 1
         System.out.println("Task 1");
         PoemBeautifier poemBeautifier = new PoemBeautifier();
