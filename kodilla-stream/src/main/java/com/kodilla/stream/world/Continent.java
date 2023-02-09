@@ -13,6 +13,7 @@ public class Continent {
     }
 
     public List<Country> getCountries() {
-        return countries;
+
+        return new ArrayList<>(countries);
     }
 }
