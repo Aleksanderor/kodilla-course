@@ -1,5 +1,6 @@
 package com.kodilla.testing.library;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -7,7 +8,6 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -22,6 +22,13 @@ class BookDirectoryTestSuite {
 
     @Mock
     private LibraryDatabase libraryDatabaseMock;
+    private LibraryUser libraryUser;
+    @BeforeEach
+    void setup(){
+        LibraryUser libraryUser = new LibraryUser("tomek","kowal", "921932");
+        //libraryDatabaseMock = new ()
+
+    }
     private List<Book> generateListOfNBooks(int booksQuantity) {
         List<Book> resultList = new ArrayList<>();
         for (int n = 1; n <= booksQuantity; n++) {
@@ -33,22 +40,14 @@ class BookDirectoryTestSuite {
 
     @Test                                                                               // [1]
     void testListBooksWithConditionsReturnList() {
-        // given
+        /// given
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
-        List<Book> resultListOfBooks = new ArrayList<>();
-        Book book1 = new Book("Secrets of Alamo", "John Smith", 2008);                   // [5]
-        Book book2 = new Book("Secretaries and Directors", "Dilbert Michigan", 2012);    // [6]
-        Book book3 = new Book("Secret life of programmers", "Steve Wolkowitz", 2016);    // [7]
-        Book book4 = new Book("Secrets of Java", "Ian Tenewitch", 2010);                 // [8]
-        resultListOfBooks.add(book1);
-        resultListOfBooks.add(book2);
-        resultListOfBooks.add(book3);
-        resultListOfBooks.add(book4);
+        List<Book> resultListOfBooks = generateListOfNBooks(4);
 
         // when
-        when(libraryDatabaseMock.listBooksWithCondition("Secret")).thenReturn(resultListOfBooks);// [13]
+        when(libraryDatabaseMock.listBooksWithCondition("Secret")).thenReturn(resultListOfBooks);
 
-        //then
+        // then
         List<Book> theListOfBooks = bookLibrary.listBooksWithCondition("Secret");
         assertEquals(4, theListOfBooks.size());
     }
@@ -98,7 +97,6 @@ class BookDirectoryTestSuite {
             "then the books list should be empty")
     void testListFfBookInHandOffIs0() {
         //given
-        LibraryUser libraryUser = new LibraryUser("tomek","kowal", "921932");
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
         List<Book> books = Collections.emptyList();
         when(bookLibrary.listBooksInHandsOf(libraryUser)).thenReturn(books);
@@ -114,12 +112,9 @@ class BookDirectoryTestSuite {
     @DisplayName("When library user has 1 book " +
             "then the books list have 1 posistion")
     void  testListFfBookInHandOffIs1 () {
-
-        LibraryUser libraryUser = new LibraryUser("tomek","kowal", "921932");
+        //given
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
-        List<Book> books = Arrays.asList(
-                new Book ("arsr","arrfgtrr", 1231223)
-        );
+        List<Book> books = generateListOfNBooks(1);
         when(bookLibrary.listBooksInHandsOf(libraryUser)).thenReturn(books);
 
         //when
@@ -135,15 +130,8 @@ class BookDirectoryTestSuite {
     void testListFfBookInHandOffIs5(){
 
         //given
-        LibraryUser libraryUser = new LibraryUser("tomek","kowal", "921932");
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
-        List<Book> books = Arrays.asList(
-        new Book ("arsr","arrfgtrr", 1231223),
-        new Book ("arrrrr","arrqwerr", 1231123),
-        new Book ("arrwr","arrqewqqwerr", 1213123),
-        new Book ("arrrqqrr","arrwwrr", 1235123),
-        new Book ("arttrr","arrwrr", 1231823)
-        );
+        List<Book> books = generateListOfNBooks(5);
         when(bookLibrary.listBooksInHandsOf(libraryUser)).thenReturn(books);
 
         //when
