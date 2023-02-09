@@ -16,10 +16,10 @@ public class StreamMain {                                                   // [
     public static void main(String[] args) {
 
         // Exercise 1
-        System.out.println("Task 1");
+        System.out.println("...............Task 1...............");
         PoemBeautifier poemBeautifier = new PoemBeautifier();
 
-        //Adding three exclamation marks and the beginning and at the and of String "text"
+        //Adding three exclamation marks and the beginning and at the end of String "text"
         PoemDecorator add3ExclamationMarks = text -> "!!! " + text + " !!!";
         poemBeautifier.beautify("text", add3ExclamationMarks);
 
@@ -27,13 +27,13 @@ public class StreamMain {                                                   // [
         PoemDecorator toUpperText = String::toUpperCase;
         poemBeautifier.beautify("text", toUpperText);
 
-        //Adding three ### and the beginning and at the and of String "text"
+        //Adding three ### and the beginning and at the end of String "text"
         PoemDecorator addHashtags = text -> "### " + text + " ###";
         poemBeautifier.beautify("text", addHashtags);
 
 
-        // Exercise 2
-        System.out.println("Task 2");
+        // Exercise 3
+        System.out.println("...............Task 2...............");
         Forum forum = new Forum(List.of(
                 new ForumUser(1,"user1",'M',LocalDate.of(2010, 1,23), 10),
                 new ForumUser(2,"user2",'M',LocalDate.of(1997, 12,3), 1),
@@ -41,7 +41,7 @@ public class StreamMain {                                                   // [
         ));
         Map<Integer, ForumUser> resultMap = forum.getUserList().stream()
                 .filter(forumUser -> forumUser.getGender() == 'M')
-                .filter(forumUser -> LocalDate.now().getYear() - forumUser.getBirthDate().getYear() > 20)
+                .filter(forumUser -> LocalDate.now().getYear() - forumUser.getBirthDate().getYear() >= 20)
                 .filter(forumUser -> forumUser.getNumberOfPosts() > 0)
                 .collect(Collectors.toMap(ForumUser::getUserId, forumUser -> forumUser));
 
