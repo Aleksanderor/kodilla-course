@@ -19,9 +19,6 @@ public class ArrayOperationsTestSuite {
         double average = ArrayOperations.getAverage(numbers);
 
         //Then
-        assertEquals(3.3, average, 0.01);
-
-        System.out.println("The average grade is: " + average);
-
+        assertEquals(3.3, average);
     }
 }
