@@ -34,17 +34,20 @@ public class StreamMain {                                                   // [
         // Exercise 2
         System.out.println("Task 2");
         Forum forum = new Forum(List.of(
-                new ForumUser(1,"user1",'M',LocalDate.of(2000, 1,23), 10),
-                new ForumUser(1,"user2",'K',LocalDate.of(1410, 12,3), 1),
-                new ForumUser(1,"user3",'M',LocalDate.of(2000, 1,11), 15)
+                new ForumUser(1,"user1",'M',LocalDate.of(2010, 1,23), 10),
+                new ForumUser(2,"user2",'M',LocalDate.of(1997, 12,3), 1),
+                new ForumUser(3,"user3",'M',LocalDate.of(2000, 1,11), 15)
         ));
         Map<Integer, ForumUser> resultMap = forum.getUserList().stream()
                 .filter(forumUser -> forumUser.getGender() == 'M')
-                .filter(forumUser -> LocalDate.now().getYear() - forumUser.getBirthDate().getYear() >= 2000)
+                .filter(forumUser -> LocalDate.now().getYear() - forumUser.getBirthDate().getYear() > 20)
                 .filter(forumUser -> forumUser.getNumberOfPosts() > 0)
                 .collect(Collectors.toMap(ForumUser::getUserId, forumUser -> forumUser));
-        resultMap.forEach((key, value) -> System.out.println("Key: " + key + ", Value: " + value.getUsername()));
-    }
+
+        resultMap.entrySet().stream()
+              .map(entry -> entry.getKey() + ":" + entry.getValue())
+                .forEach(System.out::println);
+   }
 }
 
 
