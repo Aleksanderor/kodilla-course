@@ -21,5 +21,7 @@ public class ArrayOperationsTestSuite {
         //Then
         assertEquals(3.3, average, 0.01);
 
+        System.out.println("The average grade is: " + average);
+
     }
 }
