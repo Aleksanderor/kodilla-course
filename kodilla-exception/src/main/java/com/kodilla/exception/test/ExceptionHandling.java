@@ -1,17 +1,18 @@
-//package com.kodilla.exception.test;
-//
-//public class ExceptionHandling {
-//    public static void main(String[] args) {
-//    SecondChallenge secondChallenge = new SecondChallenge();
-//
-//    try {
-//        String result = secondChallenge.probablyIWillThrowException(2.0, 1.5);
-//        System.out.println(result);
-//    } catch (Exception e) {
-//        System.out.println("Problem.." + e);
-//    } finally {
-//        System.out.println(" : ) ");
-//
-//    }
-//}
-//
+package com.kodilla.exception.test;
+
+public class ExceptionHandling {
+
+    public String probablyIWillThrowException() {
+        SecondChallenge challenge = new SecondChallenge();
+        try {
+            challenge.probablyIWillThrowException(2, 1.5);
+        } catch (Exception e) {
+            System.out.println("Problem, invalid method arguments");
+        } finally {
+            System.out.println();
+        }
+        return "Done";
+    }
+}
+/s
+
