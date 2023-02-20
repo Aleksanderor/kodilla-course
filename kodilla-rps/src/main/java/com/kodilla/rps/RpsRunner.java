@@ -6,7 +6,6 @@ public class RpsRunner {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        boolean end = false;
 
         System.out.println("witaj w grze papier, kamieć, nożyce :)");
         System.out.println("podaj imię dla gracza");
