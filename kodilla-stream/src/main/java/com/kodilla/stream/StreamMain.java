@@ -27,6 +27,9 @@ public class StreamMain {                                                   // [
         PoemDecorator toUpperText = String::toUpperCase;
         poemBeautifier.beautify("text", toUpperText);
 
+        PoemDecorator add90 = text -> "90" + text + "90";
+        poemBeautifier.beautify(" 90 ", add90);
+
         //Adding three ### and the beginning and at the end of String "text"
         PoemDecorator addHashtags = text -> "### " + text + " ###";
         poemBeautifier.beautify("text", addHashtags);
