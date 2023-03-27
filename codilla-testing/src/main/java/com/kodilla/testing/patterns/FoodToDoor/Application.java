@@ -12,7 +12,8 @@ public class Application {
         String foodSupplier = "HealthyShop";
         FoodOrderRequest foodOrderRequest = new FoodOrderRequest(user, localDate, product, foodSupplier);
 
-        System.out.println(foodOrderRequest);
+        OrderProcessor orderProcessor = new OrderProcessor();
+        orderProcessor.process(foodOrderRequest);
     }
 
 
