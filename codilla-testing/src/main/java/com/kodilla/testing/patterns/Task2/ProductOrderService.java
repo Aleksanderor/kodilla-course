@@ -1,4 +1,4 @@
-package com.kodilla.testing.PATTERNS.Task2;
+package com.kodilla.testing.patterns.Task2;
 
 public class ProductOrderService {
     private final OrderNotificationService notificationService;

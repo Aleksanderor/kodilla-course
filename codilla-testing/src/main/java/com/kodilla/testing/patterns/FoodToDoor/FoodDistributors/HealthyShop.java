@@ -1,6 +1,6 @@
-package com.kodilla.testing.PATTERNS.FoodToDoor.FoodDistributors;
+package com.kodilla.testing.patterns.FoodToDoor.FoodDistributors;
 
-import com.kodilla.testing.PATTERNS.FoodToDoor.FoodOrderRequest;
+import com.kodilla.testing.patterns.FoodToDoor.FoodOrderRequest;
 
 public class HealthyShop implements FoodDistributors {
 

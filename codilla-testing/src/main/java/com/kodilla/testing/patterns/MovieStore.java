@@ -1,4 +1,4 @@
-package com.kodilla.testing.PATTERNS;
+package com.kodilla.testing.patterns;
 
 import java.util.ArrayList;
 import java.util.HashMap;

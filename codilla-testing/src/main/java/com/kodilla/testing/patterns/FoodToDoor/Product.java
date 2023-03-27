@@ -1,4 +1,4 @@
-package com.kodilla.testing.PATTERNS.FoodToDoor;
+package com.kodilla.testing.patterns.FoodToDoor;
 
 public class Product {
 
