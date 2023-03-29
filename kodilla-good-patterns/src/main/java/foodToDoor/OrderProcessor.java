@@ -1,7 +1,7 @@
-package FoodToDoor;
+package foodToDoor;
 
-import com.kodilla.testing.patterns.FoodToDoor.FoodDistributors.ExtraFoodShop;
-import com.kodilla.testing.patterns.FoodToDoor.FoodDistributors.FoodDistributors;
+import foodToDoor.foodDistributors.ExtraFoodShop;
+import foodToDoor.foodDistributors.FoodDistributors;
 
 public class OrderProcessor {
     public void process(FoodOrderRequest orderRequest) {

@@ -1,7 +1,6 @@
-package FoodToDoor;
+package foodToDoor;
 
-import com.kodilla.testing.patterns.FoodToDoor.FoodDistributors.FoodDistributors;
-
+import foodToDoor.foodDistributors.FoodDistributors;
 public class OrderPlans {
     private FoodDistributors foodDistributors;
     private User user;

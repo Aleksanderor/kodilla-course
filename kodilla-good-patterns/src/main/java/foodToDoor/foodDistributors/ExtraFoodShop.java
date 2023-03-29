@@ -1,6 +1,6 @@
-package FoodToDoor.FoodDistributors;
+package foodToDoor.foodDistributors;
 
-import com.kodilla.testing.patterns.FoodToDoor.FoodOrderRequest;
+import foodToDoor.FoodOrderRequest;
 
 public class ExtraFoodShop implements FoodDistributors {
 

@@ -1,4 +1,4 @@
-package FoodToDoor;
+package foodToDoor;
 
 import java.time.LocalDate;
 
