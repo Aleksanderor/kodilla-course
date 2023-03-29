@@ -6,7 +6,7 @@ public class FlightProcessor {
 
     public static void main(String[] args) {
 
-        MemoryFlightDepository memoryFlightDepository = new MemoryFlightDepository();
+        MemoryFlightRepository memoryFlightDepository = new MemoryFlightRepository();
 
         Flight flight1 = new Flight("Poznań", "Katowice");
         Flight flight2 = new Flight("Warsaw", "Radom");
@@ -22,12 +22,11 @@ public class FlightProcessor {
 
         List<Flight> flightsFromPoznan = memoryFlightDepository.getStartFlightCity("Poznań");
         List<Flight> flightsEndZakopane = memoryFlightDepository.getEndFlightCity("Sosnowiec");
-        List<Flight> flightsIntermediateCity = memoryFlightDepository.getEndFlightCity("Sosnowiec");
+        List<Flight> connectingFlights = memoryFlightDepository.findConnectingFlights("Poznań", "Zakopane");
 
         System.out.println("Flight from Poznań"+ flightsFromPoznan);
         System.out.println("Flight that end in Sosnowiec " + flightsEndZakopane );
-        System.out.println("Flight that that have a mid landing" + flightsIntermediateCity);
-
+        System.out.println("Connecting flights from Poznań to Zakopane: " + connectingFlights);
 
 
 

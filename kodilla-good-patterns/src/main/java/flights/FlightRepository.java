@@ -10,8 +10,6 @@ public interface FlightRepository {
 
     List<Flight> getEndFlightCity(String flightStart);
 
-    List<Flight> getIntermidiateCity(String intermediateCity);
-
-
+    List<Flight> findConnectingFlights (String startCity, String endCity);
 
 }

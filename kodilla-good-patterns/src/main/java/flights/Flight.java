@@ -8,6 +8,7 @@ public class Flight {
 
     private final String flightEnd;
 
+
     public Flight (String flightStart, String flightEnd){
         this.flightEnd=flightEnd;
         this.flightStart=flightStart;
