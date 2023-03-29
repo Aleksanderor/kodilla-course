@@ -1,4 +1,4 @@
-package FoodToDoor;
+package foodToDoor;
 
 public class Product {
 
