@@ -8,7 +8,6 @@ include 'ticTacToe'
 include 'kodilla-good-patterns'
 include 'patterns'
 include 'kodilla-good-patterns:test'
-findProject(':kodilla-good-patterns:test')?.name = 'test'
 include 'com.kodilla.spring.intro'
 include 'kodilla-spring-intro'
 

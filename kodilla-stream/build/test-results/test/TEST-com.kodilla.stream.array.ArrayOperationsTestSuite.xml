@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.stream.array.ArrayOperationsTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-24T14:24:04" hostname="DESKTOP-Q0KKPO1" time="0.039">
+  <properties/>
+  <testcase name="When calculating average from arraythen it should calculate the right average" classname="com.kodilla.stream.array.ArrayOperationsTestSuite" time="0.039"/>
+  <system-out><![CDATA[1
+2
+3
+4
+5
+6
+1
+2
+3
+4
+5
+6
+1
+2
+3
+4
+5
+6
+1
+2
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

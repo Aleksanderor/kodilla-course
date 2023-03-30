@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="testing ShapeCollector class" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-03-24T14:23:57" hostname="DESKTOP-Q0KKPO1" time="0.025">
+  <properties/>
+  <testcase name="When using getShape method +then it should get the waned object" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.007"/>
+  <testcase name="When removing a shape form the ArrayList&lt;Shape&gt; +it shoud remove the shape from ArrayList&lt;Shape&gt;" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.005"/>
+  <testcase name="When adding a new shape then it should add the new shape to the ArrayList&lt;Shape&gt;" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.002"/>
+  <testcase name="When wanting to get all Shapes in one string +then it should print the shapes form ArrayList&lt;Shape&gt; in one string" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.007"/>
+  <system-out><![CDATA[Test#: 1 starting..
+Test# 1 has been finished
+Test#: 2 starting..
+Test# 2 has been finished
+Test#: 3 starting..
+Test# 3 has been finished
+Test#: 4 starting..
+Test# 4 has been finished
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

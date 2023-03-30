@@ -2,8 +2,8 @@ package com.kodilla.testing.forum.statistics;
 
 public class ForumComment {
 
-    private String commentBody;
     private ForumPost forumPost;
+    private String commentBody;
     private String author;
 
     public ForumComment(ForumPost forumPost, String author, String commentBody) {
@@ -39,8 +39,8 @@ public class ForumComment {
     @Override
     public int hashCode() {
         int result = forumPost.hashCode();
-        result = 2 * result + commentBody.hashCode();
-        result = 2 * result + author.hashCode();
+        result = 31 * result + commentBody.hashCode();
+        result = 31 * result + author.hashCode();
         return result;
     }
 }

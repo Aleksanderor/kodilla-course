@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.stream.world.WorldTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-03-24T14:24:04" hostname="DESKTOP-Q0KKPO1" time="0.011">
+  <properties/>
+  <testcase name="testGetPeopleQuantityIf0Countries()" classname="com.kodilla.stream.world.WorldTestSuite" time="0.005"/>
+  <testcase name="Calculating people word population +then it should calculate the right quantity" classname="com.kodilla.stream.world.WorldTestSuite" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

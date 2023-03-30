@@ -4,70 +4,62 @@ import java.util.List;
 
 public class CalculateStatistics {
 
-    private double averagePostPerUser;
-    private double averageCommentsPerUser;
-    private double averageCommentsPerUserPost;
+    private double averageOfCommentsPerUSer;
+    private double averageOfPostsPerUser;
+    private double averageOfCommentsPerPost;
 
+    private double size;
+    private double postsCount;
     private double commentsCount;
-    private double postCount;
-    private double forumSize;
 
     public void calculateAdvStatistics(Statistics statistics) {
-        List<String> usersNames = statistics.usersNames();
-        int postsCount = statistics.postsCount();
-        int commentsCount = statistics.commentsCount();
+        List<String> userNames = statistics.usersNames();
+        size = userNames.size();
+        postsCount = statistics.postsCount();
+        commentsCount = statistics.commentsCount();
 
-        if (forumSize == 0 && postsCount == 0) {
-            averagePostPerUser = 0.0;
-            averageCommentsPerUserPost = 0.0;
-            averageCommentsPerUser = 0.0;
-        } else if (forumSize > 0 && postsCount == 0) {
-            averagePostPerUser = commentsCount / forumSize;
-            averageCommentsPerUserPost = postsCount / forumSize;
-            averageCommentsPerUser = 0;
-        } else if (forumSize == 0 && postsCount > 0) {
-            averagePostPerUser = commentsCount / postsCount;
-            averageCommentsPerUserPost = 0.0;
-            averageCommentsPerUser = 0.0;
-        } else if (forumSize > 0 && postsCount > 0) {
-            averagePostPerUser = commentsCount / forumSize;
-            averageCommentsPerUserPost = postsCount / forumSize;
-            averageCommentsPerUser = commentsCount / postsCount;
+        if (size == 0 && postsCount == 0) {
+            averageOfCommentsPerPost = 0.0;
+            averageOfPostsPerUser = 0.0;
+            averageOfCommentsPerUSer = 0.0;
+        } else if (size > 0 && postsCount == 0) {
+            averageOfCommentsPerUSer = commentsCount / size;
+            averageOfPostsPerUser = postsCount / size;
+            averageOfCommentsPerPost = 0;
+        } else if (size == 0 && postsCount > 0) {
+            averageOfCommentsPerPost = commentsCount / postsCount;
+            averageOfPostsPerUser = 0.0;
+            averageOfCommentsPerUSer = 0.0;
+        } else if (size > 0 && postsCount > 0) {
+            averageOfCommentsPerUSer = commentsCount / size;
+            averageOfPostsPerUser = postsCount / size;
+            averageOfCommentsPerPost = commentsCount / postsCount;
         }
     }
 
-    public double getAverageCommentsPerUser() {
-        return averageCommentsPerUser;
+
+
+    public double getSize() {
+        return size;
     }
 
-    public double getAverageCommentsPerUserPost() {
-        return averageCommentsPerUserPost;
-    }
-
-    public double getAveragePostPerUser() {
-        return averagePostPerUser;
+    public double getPostsCount() {
+        return postsCount;
     }
 
     public double getCommentsCount() {
         return commentsCount;
     }
 
-    public double getPostCount() {
-        return postCount;
+    public double getAverageOfCommentsPerUSer() {
+        return averageOfCommentsPerUSer;
     }
 
-    public double getForumSize() {
-        return forumSize;
+    public double getAverageOfCommentsPerPost() {
+        return averageOfCommentsPerPost;
     }
 
-    public void showStatistics(){
-        System.out.println(".......... Statistics: ..........");
-        System.out.println("User count: " + getForumSize());
-        System.out.println("Post count: "+ getPostCount());
-        System.out.println("Comments count: " + getCommentsCount());
-        System.out.println("Comments per User: " + getAverageCommentsPerUserPost());
-        System.out.println("Comments per user Post: " + getAverageCommentsPerUserPost());
-
-
+    public double getAverageOfPostsPerUser() {
+        return averageOfPostsPerUser;
     }
 }
