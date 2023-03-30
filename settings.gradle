@@ -7,7 +7,6 @@ include 'kodilla-rps'
 include 'ticTacToe'
 include 'kodilla-good-patterns'
 include 'patterns'
-include 'kodilla-good-patterns:test'
 include 'com.kodilla.spring.intro'
 include 'kodilla-spring-intro'
 
