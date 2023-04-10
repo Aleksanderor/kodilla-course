@@ -35,7 +35,6 @@ public class UserTestSuite {
         olek.setSocialNetwork(new SnapchatPublisher());
         String olekSocialMedia = olek.sharePost();
 
-
         // then
         assertEquals("Snapchat", olekSocialMedia);
 
