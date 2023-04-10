@@ -10,4 +10,6 @@ include 'patterns'
 include 'com.kodilla.spring.intro'
 include 'kodilla-spring-intro'
 include 'kodilla-spring'
+include 'kodilla-spring-web'
+include 'kodilla-patterns'
 
