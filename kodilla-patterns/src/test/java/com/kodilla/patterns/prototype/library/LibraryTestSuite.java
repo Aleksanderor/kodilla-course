@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 public class LibraryTestSuite {
 
     @Test
-    void getBooksTest(){
+    void getBooksTest() throws CloneNotSupportedException {
 
         // given
         LocalDate publicationDateBook1 = LocalDate.of(2023,1,23);
@@ -29,29 +29,16 @@ public class LibraryTestSuite {
         library.getBooks().add(book3);
         library.getBooks().add(book4);
 
-        Library cloneLibrary = null;
-        try {
-            cloneLibrary = library.shallowCopy();
-            cloneLibrary.setName("Library 2");
-        } catch (CloneNotSupportedException e) {
-            System.out.println(e);
-        }
+        Library cloneLibrary = library.shallowCopy();
+        cloneLibrary.setName("Library 2");
 
-        Library deepClonedLibrary = null;
-        try {
-            deepClonedLibrary = library.deepCopy();
-            deepClonedLibrary.setName("Library3");
-        } catch (CloneNotSupportedException e) {
-            System.out.println(e);
-        }
+        Library deepClonedLibrary = library.deepCopy();
+        deepClonedLibrary.setName("Library3");
 
         // when
         library.getBooks().remove(book4);
 
         // then
-        System.out.println(library);
-        System.out.println(cloneLibrary);
-        System.out.println(deepClonedLibrary);
         assertEquals(3, library.getBooks().size());
         assertEquals(3, cloneLibrary.getBooks().size());
         assertEquals(4, deepClonedLibrary.getBooks().size());
