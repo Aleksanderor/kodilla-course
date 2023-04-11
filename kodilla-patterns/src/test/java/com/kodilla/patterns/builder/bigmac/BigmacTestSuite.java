@@ -3,7 +3,6 @@ package com.kodilla.patterns.builder.bigmac;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -23,19 +22,11 @@ public class BigmacTestSuite {
                 .ingredient("pickle")
                 .build();
 
-        //when
-        int burgerIngredients = bigmac.getIngredients().size();
-        String expectedBigMacBun = bigmac.getBun();
-        String expectedBigMacSauce = bigmac.getSauce();
-        List<String> actualBigMacIngredients = bigmac.getIngredients();
-        List<String> expectedBigMacIngredients = Arrays.asList("tomato", "onions", "pickle");
-
-
         //then
-        assertEquals(3,burgerIngredients);
-        assertEquals("gluten free", expectedBigMacBun);
-        assertEquals("spicy", expectedBigMacSauce);
-        assertTrue(actualBigMacIngredients.containsAll(expectedBigMacIngredients));
+        assertEquals(3,bigmac.getIngredients().size());
+        assertEquals("gluten free", bigmac.getBun());
+        assertEquals("spicy", bigmac.getSauce());
+        assertTrue(bigmac.getIngredients().containsAll(Arrays.asList("tomato", "onions", "pickle")));
 
 
     }
