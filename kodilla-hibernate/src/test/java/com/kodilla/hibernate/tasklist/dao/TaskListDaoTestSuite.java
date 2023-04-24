@@ -26,7 +26,7 @@ public class TaskListDaoTestSuite {
     }
 
     @AfterEach
-    public void tearDown() {
+    public void cleanUp() {
         taskListDao.delete(taskList);
     }
 
