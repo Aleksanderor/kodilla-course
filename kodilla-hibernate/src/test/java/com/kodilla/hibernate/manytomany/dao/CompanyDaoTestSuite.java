@@ -18,8 +18,6 @@ class CompanyDaoTestSuite {
     @Autowired
     private CompanyDao companyDao;
     @Autowired
-    private EmployeeDao employeeDao;
-    @Autowired
     private EmployeeService employeeService;
 
     @Test
@@ -58,7 +56,7 @@ class CompanyDaoTestSuite {
         assertNotEquals(0, dataMaestersId);
         assertNotEquals(0, greyMatterId);
 
-        // CleanUp
+        // cleanUp
         try {
             companyDao.deleteById(softwareMachineId);
             companyDao.deleteById(dataMaestersId);
