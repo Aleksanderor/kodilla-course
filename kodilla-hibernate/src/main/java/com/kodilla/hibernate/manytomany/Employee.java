@@ -8,11 +8,11 @@ import java.util.List;
 
 @NamedQueries({
         @NamedQuery(
-                name = "Employee.retrieveEmployeesWithAGivenLastname",
+                name = "Employee.findEmployeesWithAGivenLastname",
                 query = "FROM Employee WHERE lastname = :LASTNAME"
         ),
         @NamedQuery(
-                name = "Employee.retrieveEmployeesWithAGivenPartOfLastname",
+                name = "Employee.findEmployeesWithAGivenPartOfLastname",
                 query = "FROM Employee WHERE lastname LIKE concat('%',:ARG, '%')"
         )
 })

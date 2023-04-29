@@ -8,12 +8,12 @@ import java.util.List;
 
 @NamedQueries({
         @NamedQuery(
-                name = "Company.retrieveCompaniesByFragmentOfTheName",
+                name = "Company.findCompaniesByFragmentOfTheName",
                 query = "FROM Company WHERE substring(name,1, 3) = :FRAGMENT_OF_THE_NAME"
         ),
 
         @NamedQuery(
-                name = "Company.retrieveCompaniesByAnyFragmentOfTheName",
+                name = "Company.findCompaniesByAnyFragmentOfTheName",
                 query = "FROM Company WHERE name LIKE concat('%',:ARG, '%')"
 
         )
