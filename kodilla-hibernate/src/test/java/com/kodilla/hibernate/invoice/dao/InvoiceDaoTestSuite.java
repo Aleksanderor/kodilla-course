@@ -22,7 +22,7 @@ public class InvoiceDaoTestSuite {
     @Test
     void testInvoiceDaoSave() {
 
-        // given
+        //given
 
         Product product1 = new Product("productOne");
         Product product2 = new Product("productTwo");
