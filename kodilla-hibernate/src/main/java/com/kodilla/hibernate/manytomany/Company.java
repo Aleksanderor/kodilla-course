@@ -1,64 +1,66 @@
 package com.kodilla.hibernate.manytomany;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@NamedQueries({
-        @NamedQuery(
-                name = "Company.findCompaniesByFragmentOfTheName",
-                query = "FROM Company WHERE substring(name,1, 3) = :FRAGMENT_OF_THE_NAME"
+
+@NamedNativeQueries({
+        @NamedNativeQuery(
+                name = "Company.retrieveCompaniesByFragmentOfTheNameNative",
+                query = "SELECT * FROM COMPANIES WHERE substring(COMPANY_NAME, 1, 3) = :FRAGMENT_OF_THE_NAME",
+                resultClass = Company.class
         ),
-
-        @NamedQuery(
-                name = "Company.findCompaniesByAnyFragmentOfTheName",
-                query = "FROM Company WHERE name LIKE concat('%',:ARG, '%')"
-
+        @NamedNativeQuery(
+                name = "Company.retrieveCompaniesByAnyFragmentOfTheNameNative",
+                query = "SELECT * FROM COMPANIES WHERE COMPANY_NAME LIKE CONCAT('%', :ARG, '%')",
+                resultClass = Company.class
         )
 })
-
 
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
 
+    @Id
+    @GeneratedValue
+    @Column(name = "COMPANY_ID")
     private int id;
+
+    @Column(name = "COMPANY_NAME")
     private String name;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "EMPLOYEES_COMPANIES",
+            joinColumns = {@JoinColumn(name = "COMPANY_ID")},
+            inverseJoinColumns = {@JoinColumn(name = "EMPLOYEE_ID")}
+    )
     private List<Employee> employees = new ArrayList<>();
 
-    public Company() {
-    }
+    public Company() {}
 
     public Company(String name) {
         this.name = name;
     }
 
-    @Id
-    @GeneratedValue
-    @NotNull
-    @Column(name = "COMPANY_ID", unique = true)
     public int getId() {
         return id;
     }
 
-    @NotNull
-    @Column(name = "COMPANY_NAME")
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
 
-    private void setId(int id) {
-        this.id = id;
-    }
-
-    private void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-
-    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "companies")
     public List<Employee> getEmployees() {
         return employees;
     }
