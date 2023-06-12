@@ -8,12 +8,12 @@ import java.util.List;
 
 @NamedNativeQueries({
         @NamedNativeQuery(
-                name = "Company.retrieveCompaniesByFragmentOfTheNameNative",
+                name = "Company.findCompaniesByFragmentOfTheNameNative",
                 query = "SELECT * FROM COMPANIES WHERE substring(COMPANY_NAME, 1, 3) = :FRAGMENT_OF_THE_NAME",
                 resultClass = Company.class
         ),
         @NamedNativeQuery(
-                name = "Company.retrieveCompaniesByAnyFragmentOfTheNameNative",
+                name = "Company.findCompaniesByAnyFragmentOfTheNameNative",
                 query = "SELECT * FROM COMPANIES WHERE COMPANY_NAME LIKE CONCAT('%', :ARG, '%')",
                 resultClass = Company.class
         )
