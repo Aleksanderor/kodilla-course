@@ -9,12 +9,12 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class taskFasade {
+public class TaskFacade {
 
     private CompanyDao companyDao;
     private EmployeeDao employeeDao;
 
-    public taskFasade(CompanyDao companyDao, EmployeeDao employeeDao) {
+    public TaskFacade(CompanyDao companyDao, EmployeeDao employeeDao) {
         this.companyDao = companyDao;
         this.employeeDao = employeeDao;
     }
