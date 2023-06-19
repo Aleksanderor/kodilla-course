@@ -1,6 +1,6 @@
 package patterns2;
 
-import Patterns2.pizza.*;
+import com.kodilla.hibernate.Patterns2.pizza.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

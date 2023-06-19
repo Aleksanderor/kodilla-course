@@ -1,17 +1,16 @@
-package Patterns2.adapter.bookclasifier.libraryb;
+package com.kodilla.hibernate.Patterns2.adapter.bookclasifier.librarya;
 
 public class Book {
-
     private final String author;
     private final String title;
-    private final int yearOfPublication;
-
+    private final int publicationYear;
     private final String signature;
 
-    public Book(final String author, final String title, final int yearOfPublication, String signature) {
+    public Book(final String author, final String title,
+                final int publicationYear, final String signature) {
         this.author = author;
         this.title = title;
-        this.yearOfPublication = yearOfPublication;
+        this.publicationYear = publicationYear;
         this.signature = signature;
     }
 
@@ -23,8 +22,8 @@ public class Book {
         return title;
     }
 
-    public int getYearOfPublication() {
-        return yearOfPublication;
+    public int getPublicationYear() {
+        return publicationYear;
     }
 
     public String getSignature() {

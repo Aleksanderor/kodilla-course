@@ -1,8 +1,8 @@
 package patterns2;
 
-import Patterns2.observer.Mentor;
-import Patterns2.observer.TaskObserver;
-import Patterns2.observer.TasksQueue;
+import com.kodilla.hibernate.Patterns2.observer.Mentor;
+import com.kodilla.hibernate.Patterns2.observer.TaskObserver;
+import com.kodilla.hibernate.Patterns2.observer.TasksQueue;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

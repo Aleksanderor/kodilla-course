@@ -1,10 +1,9 @@
-package Patterns2.pizza;
+package com.kodilla.hibernate.Patterns2.pizza;
 
 import java.math.BigDecimal;
 
-public class Mushrooms extends AbstractPizzaDecorator {
-
-    public Mushrooms(PizzaOrder pizza) {
+public class Onions extends AbstractPizzaDecorator {
+    public Onions(PizzaOrder pizza) {
         super(pizza);
     }
 
@@ -15,6 +14,6 @@ public class Mushrooms extends AbstractPizzaDecorator {
 
     @Override
     public String getDescription(){
-        return super.getDescription() + ", mushrooms";
+        return super.getDescription() + ", onions";
     }
 }

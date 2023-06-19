@@ -1,4 +1,4 @@
-package Patterns2.observer;
+package com.kodilla.hibernate.Patterns2.observer;
 
 import java.util.ArrayList;
 import java.util.List;

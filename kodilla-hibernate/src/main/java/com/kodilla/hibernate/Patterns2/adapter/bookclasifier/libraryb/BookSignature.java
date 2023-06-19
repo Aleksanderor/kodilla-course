@@ -1,7 +1,6 @@
-package Patterns2.adapter.bookclasifier.libraryb;
+package com.kodilla.hibernate.Patterns2.adapter.bookclasifier.libraryb;
 
 public class BookSignature {
-
     private final String signature;
 
     public BookSignature(final String signature) {

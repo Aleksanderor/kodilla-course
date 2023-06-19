@@ -1,4 +1,4 @@
-package Patterns2.adapter.bookclasifier.librarya;
+package com.kodilla.hibernate.Patterns2.adapter.bookclasifier.librarya;
 
 import java.util.Set;
 

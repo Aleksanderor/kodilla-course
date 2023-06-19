@@ -1,4 +1,4 @@
-package Patterns2.observer;
+package com.kodilla.hibernate.Patterns2.observer;
 
 public interface TaskObserver {
     String approveTheTask(Task task);
