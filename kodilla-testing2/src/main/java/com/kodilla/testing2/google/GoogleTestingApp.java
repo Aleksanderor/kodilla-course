@@ -1,6 +1,6 @@
 package com.kodilla.testing2.google;
 
-import com.kodilla.testing2.config.WebDriverConfig;
+import config.WebDriverConfig;
 import org.openqa.selenium.WebDriver;
 
 public class GoogleTestingApp {

@@ -3,6 +3,7 @@ package config;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
 public class WebDriverConfig {
     public final static String FIREFOX = "FIREFOX_DRIVER";
     public final static String CHROME = "CHROME_DRIVER";
