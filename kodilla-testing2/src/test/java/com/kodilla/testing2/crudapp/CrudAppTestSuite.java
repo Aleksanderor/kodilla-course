@@ -75,7 +75,7 @@ public class CrudAppTestSuite {
         Thread.sleep(4000);
     }
 
-    private void shouldDeleteTaskTrello(String taskName) throws InterruptedException {
+    private void deleteTaskTrello(String taskName) throws InterruptedException {
 
         driver.navigate().refresh();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -97,10 +97,10 @@ public class CrudAppTestSuite {
         Thread.sleep(4000);
     }
     @Test
-    public void shouldCreateTrelloCard() throws InterruptedException {
+    public void createTrelloCard() throws InterruptedException {
 
         String taskName = createCrudAppTestTask();
         sendTestTaskToTrello(taskName);
-        shouldDeleteTaskTrello(taskName);
+        deleteTaskTrello(taskName);
     }
 }
