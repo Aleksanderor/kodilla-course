@@ -13,8 +13,6 @@ public class EBayTestingApp {
         WebDriver driver = WebDriverConfig.getDriver(WebDriverConfig.FIREFOX);
         driver.get("https://www.ebay.com");
 
-        driver.findElement(By.name(SEARCHFIELD)).click();
-
         WebElement searchfield = driver.findElement(By.name(SEARCHFIELD));
         searchfield.sendKeys("Laptop");
         searchfield.submit();
